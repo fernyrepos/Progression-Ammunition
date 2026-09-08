@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" Name="PA_AmmoRefillBase" ParentName="ResourceBase">
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stackLimit>25</stackLimit>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Mass>0.5</Mass>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRefillBase">
+    <defName>PA_ArrowRefill</defName>
+    <label>arrow refill</label>
+    <description>A compact quiver bundle of field replacement arrows.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/WoodLog</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>300</WorkToMake>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <recipeMaker>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRefillBase">
+    <defName>PA_AmmoRefill</defName>
+    <label>ammo refill</label>
+    <description>A portable pack of ammunition for industrial firearms.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Steel</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>35</MarketValue>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <recipeMaker>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRefillBase">
+    <defName>PA_ChargeRefill</defName>
+    <label>charge refill</label>
+    <description>A field power cell for recharging spacer weapons.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ComponentIndustrial</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <WorkToMake>800</WorkToMake>
+    </statBases>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

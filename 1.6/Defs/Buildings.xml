@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" Name="PA_AmmoRechargerBase" ParentName="BuildingBase">
+    <thingClass>ProgressionAmmunition.Building_AmmoRecharger</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>30</pathCost>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRechargerBase">
+    <defName>PA_ArrowBox</defName>
+    <label>arrow box</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/ShelfSmall</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <costList>
+      <WoodLog>300</WoodLog>
+    </costList>
+    <modExtensions>
+      <li Class="ProgressionAmmunition.AmmoExtension">
+        <ammoType>Arrow</ammoType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRechargerBase">
+    <defName>PA_AmmoBox</defName>
+    <label>ammo box</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/ShelfSmall</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <color>(160,160,160)</color>
+    </graphicData>
+    <costList>
+      <Steel>300</Steel>
+    </costList>
+    <modExtensions>
+      <li Class="ProgressionAmmunition.AmmoExtension">
+        <ammoType>Ammo</ammoType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PA_AmmoRechargerBase">
+    <defName>PA_WeaponCharger</defName>
+    <label>weapon charger</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/ShelfSmall</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <color>(120,180,220)</color>
+    </graphicData>
+    <costList>
+      <Steel>500</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="ProgressionAmmunition.AmmoExtension">
+        <ammoType>Charge</ammoType>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

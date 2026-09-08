@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bow_Great"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <ammoType>Arrow</ammoType>
+          <maxAmmo>20</maxAmmo>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Gun_Revolver"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <maxAmmo>60</maxAmmo>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Gun_ChargeRifle"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <ammoType>Ammo</ammoType>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+</Patch>

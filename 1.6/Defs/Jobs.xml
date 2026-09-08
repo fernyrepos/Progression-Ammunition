@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>PA_ReloadAtBuilding</defName>
+    <driverClass>ProgressionAmmunition.JobDriver_ReloadAtBuilding</driverClass>
+    <reportString>reloading at TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>
