@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="PA_AmmoBox"]/researchPrerequisites</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>VFEM2_Matchlocks</li>
+        </researchPrerequisites>
+      </value>
+    </match>
+  </Operation>
+</Patch>
