@@ -11,6 +11,7 @@ namespace ProgressionAmmunition
         public static ThingDef PA_AmmoRefill;
         public static ThingDef PA_ChargeRefill;
         public static SoundDef Standard_Reload;
+        public static InventoryStockGroupDef PA_AmmoStock;
         static DefsOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(DefsOf));

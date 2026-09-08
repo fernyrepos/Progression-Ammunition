@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnColumnDef>
+    <defName>PA_AmmoCarry</defName>
+    <label>ammo</label>
+    <workerClass>ProgressionAmmunition.PawnColumnWorker_CarryAmmo</workerClass>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+
+</Defs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <InventoryStockGroupDef>
+    <defName>PA_AmmoStock</defName>
+    <thingDefs>
+      <li>PA_ArrowRefill</li>
+      <li>PA_AmmoRefill</li>
+      <li>PA_ChargeRefill</li>
+    </thingDefs>
+    <defaultThingDef>PA_AmmoRefill</defaultThingDef>
+  </InventoryStockGroupDef>
+
+</Defs>
