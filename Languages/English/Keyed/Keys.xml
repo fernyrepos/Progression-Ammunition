@@ -8,11 +8,12 @@
   <PA_ForceReloadDesc>Order colonist to reload ammunition at the nearest recharger building.</PA_ForceReloadDesc>
   <PA_RefillWithConsumable>Refill ammo</PA_RefillWithConsumable>
   <PA_RefillWithConsumableDesc>Consume 1 {0} to instantly refill ammunition to maximum.</PA_RefillWithConsumableDesc>
-  <PA_AmmoAlreadyFull>Ammunition is already full.</PA_AmmoAlreadyFull>
-  <PA_IncompatibleWeapon>Incompatible weapon type.</PA_IncompatibleWeapon>
-  <PA_RechargerUnpowered>Recharger is not powered.</PA_RechargerUnpowered>
+  <PA_AmmoAlreadyFull>Cannot reload: ammunition is already full.</PA_AmmoAlreadyFull>
+  <PA_IncompatibleWeapon>Cannot reload: incompatible weapon type.</PA_IncompatibleWeapon>
+  <PA_RechargerUnpowered>Cannot reload: recharger is not powered.</PA_RechargerUnpowered>
+  <PA_RechargerInUse>Cannot reload: recharger is already in use.</PA_RechargerInUse>
   <PA_ReloadWeaponAtBuilding>Reload {0}</PA_ReloadWeaponAtBuilding>
-  <PA_NoRechargerAvailable>No available {0} recharger found.</PA_NoRechargerAvailable>
+  <PA_NoRechargerAvailable>Cannot reload: no unreserved {0} recharger found.</PA_NoRechargerAvailable>
   <PA_ReportReloadingAtBuilding>reloading at {0}.</PA_ReportReloadingAtBuilding>
   <PA_AmmoType_Arrow>arrow</PA_AmmoType_Arrow>
   <PA_AmmoType_Ammo>ammo</PA_AmmoType_Ammo>

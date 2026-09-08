@@ -30,25 +30,30 @@ namespace ProgressionAmmunition
 
             var weapon = selPawn.equipment?.Primary;
             var ammoComp = weapon?.TryGetComp<CompAmmo>();
-            if (ammoComp == null || ammoComp.WeaponAmmoType != RechargerAmmoType)
+            if (ammoComp == null)
+            {
+                yield break;
+            }
+            else if (ammoComp.WeaponAmmoType != RechargerAmmoType)
             {
                 yield return new FloatMenuOption("PA_IncompatibleWeapon".Translate(), null);
-                yield break;
             }
-
-            if (IsPowered is false)
+            else if (IsPowered is false)
             {
                 yield return new FloatMenuOption("PA_RechargerUnpowered".Translate(), null);
-                yield break;
             }
-
-            if (ammoComp.CurAmmo >= ammoComp.MaxAmmo)
+            else if (ammoComp.CurAmmo >= ammoComp.MaxAmmo)
             {
                 yield return new FloatMenuOption("PA_AmmoAlreadyFull".Translate(), null);
-                yield break;
             }
-
-            yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("PA_ReloadWeaponAtBuilding".Translate(weapon.Label), () => selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(DefsOf.PA_ReloadAtBuilding, this), JobTag.Misc)), selPawn, this);
+            else if (selPawn.CanReserve(this) is false)
+            {
+                yield return new FloatMenuOption("PA_RechargerInUse".Translate(), null);
+            }
+            else
+            {
+                yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("PA_ReloadWeaponAtBuilding".Translate(weapon.Label), () => selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(DefsOf.PA_ReloadAtBuilding, this), JobTag.Misc)), selPawn, this);
+            }
         }
     }
 }

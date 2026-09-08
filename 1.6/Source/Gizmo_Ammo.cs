@@ -78,32 +78,33 @@ namespace ProgressionAmmunition
             if (compAmmo.CurAmmo >= compAmmo.MaxAmmo)
             {
                 Messages.Message("PA_AmmoAlreadyFull".Translate(), pawn, MessageTypeDefOf.RejectInput, false);
-                return;
-            }
-
-            var consumable = compAmmo.ConsumableDef;
-            if (consumable != null)
-            {
-                var item = pawn.inventory.innerContainer.FirstOrFallback(t => t.def == consumable);
-                if (item != null)
-                {
-                    pawn.inventory.innerContainer.Take(item, 1).Destroy();
-                    compAmmo.RefillAmmo();
-                    DefsOf.Standard_Reload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
-                    return;
-                }
-            }
-
-            var targetBuilding = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.Touch, TraverseParms.For(pawn), 9999f, t => t is Building_AmmoRecharger recharger && !recharger.IsForbidden(pawn) && recharger.CanRecharge(compAmmo));
-
-            if (targetBuilding != null)
-            {
-                var job = JobMaker.MakeJob(DefsOf.PA_ReloadAtBuilding, targetBuilding);
-                pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
             }
             else
             {
-                Messages.Message("PA_NoRechargerAvailable".Translate(compAmmo.WeaponAmmoType.ToStringHuman()), pawn, MessageTypeDefOf.RejectInput, false);
+                var consumable = compAmmo.ConsumableDef;
+                if (consumable != null)
+                {
+                    var item = pawn.inventory.innerContainer.FirstOrFallback(t => t.def == consumable);
+                    if (item != null)
+                    {
+                        pawn.inventory.innerContainer.Take(item, 1).Destroy();
+                        compAmmo.RefillAmmo();
+                        DefsOf.Standard_Reload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                        return;
+                    }
+                }
+
+                var targetBuilding = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.Touch, TraverseParms.For(pawn), 9999f, t => t is Building_AmmoRecharger recharger && recharger.IsForbidden(pawn) is false && recharger.CanRecharge(compAmmo) && pawn.CanReserve(recharger));
+
+                if (targetBuilding != null)
+                {
+                    var job = JobMaker.MakeJob(DefsOf.PA_ReloadAtBuilding, targetBuilding);
+                    pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                }
+                else
+                {
+                    Messages.Message("PA_NoRechargerAvailable".Translate(compAmmo.WeaponAmmoType.ToStringHuman()), pawn, MessageTypeDefOf.RejectInput, false);
+                }
             }
         }
     }
