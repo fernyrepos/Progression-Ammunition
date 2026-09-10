@@ -7,7 +7,7 @@
 		<description>An expertise in tactical inventory management, optimizing ammo handling.</description>
 		<statOffsets>
 			<PA_MaxAmmoFactor>+0.025</PA_MaxAmmoFactor>
-			<PA_AmmoReloadSpeedFactor>-0.025</PA_AmmoReloadSpeedFactor>
+			<PA_AmmoRefillSpeed>+0.025</PA_AmmoRefillSpeed>
 		</statOffsets>
 	</VSE.Expertise.ExpertiseDef>
 </Defs>

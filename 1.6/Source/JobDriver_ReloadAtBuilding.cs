@@ -29,9 +29,9 @@ namespace ProgressionAmmunition
             });
 
             yield return Toils_Goto.GotoThing(BuildingInd, PathEndMode.Touch);
-
-            float reloadSpeedFactor = pawn.GetStatValue(StatDef.Named("PA_AmmoReloadSpeedFactor"));
-            int reloadTicks = Mathf.RoundToInt(BaseReloadTicks / Mathf.Max(reloadSpeedFactor, 0.1f));
+            
+            float reloadSpeed = pawn.GetStatValue(DefsOf.PA_AmmoRefillSpeed);
+            int reloadTicks = Mathf.RoundToInt(BaseReloadTicks / Mathf.Max(reloadSpeed, 0.1f));
 
             var waitToil = Toils_General.Wait(reloadTicks, BuildingInd);
             waitToil.WithProgressBarToilDelay(BuildingInd);

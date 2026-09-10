@@ -19,7 +19,7 @@
 		</associatedMemes>
 		<statOffsets>
 			<PA_MaxAmmoFactor>0.25</PA_MaxAmmoFactor>
-			<PA_AmmoReloadSpeedFactor>-0.2</PA_AmmoReloadSpeedFactor>
+			<PA_AmmoRefillSpeed>+0.2</PA_AmmoRefillSpeed>
 		</statOffsets>
 	</PreceptDef>
 
@@ -35,7 +35,7 @@
 		</associatedMemes>
 		<statOffsets>
 			<PA_MaxAmmoFactor>-0.25</PA_MaxAmmoFactor>
-			<PA_AmmoReloadSpeedFactor>0.2</PA_AmmoReloadSpeedFactor>
+			<PA_AmmoRefillSpeed>-0.2</PA_AmmoRefillSpeed>
 		</statOffsets>
 	</PreceptDef>
 </Defs>

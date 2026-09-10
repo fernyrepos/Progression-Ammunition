@@ -3,7 +3,7 @@
 	<StatDef>
 		<defName>PA_MaxAmmoFactor</defName>
 		<label>max ammo multiplier</label>
-		<description>A multiplier applied to max ammo carried by this pawn.</description>
+		<description>A multiplier applied to max ammo this pawn can carry.</description>
 		<category>PawnCombat</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<minValue>0.1</minValue>
@@ -12,9 +12,9 @@
 		<toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
 	</StatDef>
 	<StatDef>
-		<defName>PA_AmmoReloadSpeedFactor</defName>
-		<label>ammo refill speed factor</label>
-		<description>A multiplier applied to ammo refill speed for this pawn.</description>
+		<defName>PA_AmmoRefillSpeed</defName>
+		<label>ammo refill speed</label>
+		<description>How fast this pawn refills ammo.</description>
 		<category>PawnCombat</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<minValue>0.1</minValue>
