@@ -13,6 +13,8 @@ namespace ProgressionAmmunition
         public static SoundDef Standard_Reload;
         public static SoundDef PA_ReloadArrows;
         public static SoundDef PA_ChargeWeapon;
+        public static StatDef PA_MaxAmmoFactor;
+        public static StatDef PA_AmmoReloadSpeedFactor;
         public static InventoryStockGroupDef PA_AmmoStock;
         static DefsOf()
         {

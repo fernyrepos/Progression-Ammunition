@@ -18,11 +18,17 @@ namespace ProgressionAmmunition
             get
             {
                 var ext = parent.def.GetModExtension<AmmoExtension>();
-                if (ext != null && ext.maxAmmo > 0)
+                float ammo = (ext != null && ext.maxAmmo > 0) ? ext.maxAmmo : ProgressionAmmunitionMod.settings.baselineMaxAmmo;
+
+                var pawn = Holder;
+                if (pawn != null)
                 {
-                    return ext.maxAmmo;
+                    StatDef maxAmmoFactorStat = DefsOf.PA_MaxAmmoFactor;
+                    float factor = (maxAmmoFactorStat != null) ? pawn.GetStatValue(maxAmmoFactorStat) : 1f;
+                    ammo *= factor;
                 }
-                return ProgressionAmmunitionMod.settings.baselineMaxAmmo;
+
+                return Mathf.Max(1, Mathf.RoundToInt(ammo));
             }
         }
 
