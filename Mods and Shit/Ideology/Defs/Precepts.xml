@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IssueDef>
+		<defName>PA_AmmoHandling</defName>
+		<label>ammo handling</label>
+		<iconPath>UI/Issues/PA_AmmoHandling</iconPath>
+	</IssueDef>
+
+	<PreceptDef>
+		<defName>PW_AmmoHandling_Improved</defName>
+		<issue>PA_AmmoHandling</issue>
+		<label>improved</label>
+		<description>Efficient management of ammunition reserves and streamlined reloading drills ensure our fighters stay in the fight longer.</description>
+		<impact>Medium</impact>
+		<associatedMemes>
+			<li>Raider</li>
+			<li>Supremacist</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_ViolentConversion</li>
+		</associatedMemes>
+		<statOffsets>
+			<PA_MaxAmmoFactor>0.25</PA_MaxAmmoFactor>
+			<PA_AmmoReloadSpeedFactor>-0.2</PA_AmmoReloadSpeedFactor>
+		</statOffsets>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>PW_AmmoHandling_Neglected</defName>
+		<issue>PA_AmmoHandling</issue>
+		<label>neglected</label>
+		<description>We care little for military logistics and specialized ammunition maintenance, leaving our supplies unoptimized and slow to refill.</description>
+		<impact>Medium</impact>
+		<associatedMemes>
+			<li>Guilty</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		</associatedMemes>
+		<statOffsets>
+			<PA_MaxAmmoFactor>-0.25</PA_MaxAmmoFactor>
+			<PA_AmmoReloadSpeedFactor>0.2</PA_AmmoReloadSpeedFactor>
+		</statOffsets>
+	</PreceptDef>
+</Defs>
