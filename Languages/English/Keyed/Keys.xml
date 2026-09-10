@@ -8,14 +8,22 @@
   <PA_ForceReloadDesc>Order colonist to reload ammunition at the nearest recharger building.</PA_ForceReloadDesc>
   <PA_RefillWithConsumable>Refill ammo</PA_RefillWithConsumable>
   <PA_RefillWithConsumableDesc>Consume 1 {0} to instantly refill ammunition to maximum.</PA_RefillWithConsumableDesc>
-  <PA_AmmoAlreadyFull>Cannot reload: ammunition is already full.</PA_AmmoAlreadyFull>
-  <PA_IncompatibleWeapon>Cannot reload: incompatible weapon type.</PA_IncompatibleWeapon>
-  <PA_RechargerUnpowered>Cannot reload: recharger is not powered.</PA_RechargerUnpowered>
-  <PA_RechargerInUse>Cannot reload: recharger is already in use.</PA_RechargerInUse>
-  <PA_ReloadWeaponAtBuilding>Reload {0}</PA_ReloadWeaponAtBuilding>
-  <PA_NoRechargerAvailable>Cannot reload: no unreserved {0} recharger found.</PA_NoRechargerAvailable>
-  <PA_ReportReloadingAtBuilding>reloading at {0}.</PA_ReportReloadingAtBuilding>
+  <PA_AmmoAlreadyFull>Cannot refill: ammunition is already full.</PA_AmmoAlreadyFull>
+  <PA_IncompatibleWeapon>Cannot refill: incompatible weapon type.</PA_IncompatibleWeapon>
+  <PA_RechargerUnpowered>Cannot refill: recharger is not powered.</PA_RechargerUnpowered>
+  <PA_RechargerInUse>Cannot refill: refill building is already in use.</PA_RechargerInUse>
+  <PA_ReloadWeaponAtBuilding>Refill {0}</PA_ReloadWeaponAtBuilding>
+  <PA_NoRechargerAvailable>Cannot refill: no unreserved {0} refill building found.</PA_NoRechargerAvailable>
+  <PA_ReportReloadingAtBuilding>refilling at {0}.</PA_ReportReloadingAtBuilding>
   <PA_AmmoType_Arrow>arrow</PA_AmmoType_Arrow>
   <PA_AmmoType_Ammo>ammo</PA_AmmoType_Ammo>
   <PA_AmmoType_Charge>charge</PA_AmmoType_Charge>
+  <PA_SpawnRefillHeader>Refills carried by spawned non-player pawns</PA_SpawnRefillHeader>
+  <PA_AnimalRefillChance>Chance for animal NPCs to spawn with an arrow refill: {0}%</PA_AnimalRefillChance>
+  <PA_NeolithicRefillChance>Chance for neolithic faction NPCs to spawn with an arrow refill: {0}%</PA_NeolithicRefillChance>
+  <PA_MedievalRefillChance>Chance for medieval faction NPCs to spawn with an arrow refill: {0}%</PA_MedievalRefillChance>
+  <PA_IndustrialRefillChance>Chance for industrial faction NPCs to spawn with an ammo refill: {0}%</PA_IndustrialRefillChance>
+  <PA_SpacerRefillChance>Chance for spacer faction NPCs to spawn with a charge refill: {0}%</PA_SpacerRefillChance>
+  <PA_UltraRefillChance>Chance for ultra faction NPCs to spawn with a charge refill: {0}%</PA_UltraRefillChance>
+  <PA_ArchotechRefillChance>Chance for archotech faction NPCs to spawn with a charge refill: {0}%</PA_ArchotechRefillChance>
 </LanguageData>

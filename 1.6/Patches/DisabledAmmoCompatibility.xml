@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov" and not(modExtensions)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov" and not(modExtensions)]</xpath>
+      <value><modExtensions /></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath>
+      <value><li Class="ProgressionAmmunition.AmmoExtension" /></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <value><disableAmmo>true</disableAmmo></value>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Vanilla Factions Expanded - Tribals</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFET_Throwspikes" and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFET_Throwspikes" and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFET_Throwspikes"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFET_Throwspikes"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFET_Throwspikes"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Vanilla Weapons Expanded - Tribal</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[(defName="VWE_Sling" or defName="VWE_Throwing_Shards" or defName="VWE_Weapon_FireBomb") and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[(defName="VWE_Sling" or defName="VWE_Throwing_Shards" or defName="VWE_Weapon_FireBomb") and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VWE_Sling" or defName="VWE_Throwing_Shards" or defName="VWE_Weapon_FireBomb"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VWE_Sling" or defName="VWE_Throwing_Shards" or defName="VWE_Weapon_FireBomb"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VWE_Sling" or defName="VWE_Throwing_Shards" or defName="VWE_Weapon_FireBomb"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Roo's Minotaur Xenotype Expanded</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="RBME_Sling" and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="RBME_Sling" and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="RBME_Sling"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="RBME_Sling"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="RBME_Sling"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Vanilla Factions Expanded - Settlers</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFES_Tomahawk" and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFES_Tomahawk" and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Firefoam Things</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[(defName="Mosi_GrenadeFirefoam" or defName="Mosi_FirefoamSprayer") and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[(defName="Mosi_GrenadeFirefoam" or defName="Mosi_FirefoamSprayer") and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="Mosi_GrenadeFirefoam" or defName="Mosi_FirefoamSprayer"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Mosi_GrenadeFirefoam" or defName="Mosi_FirefoamSprayer"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Mosi_GrenadeFirefoam" or defName="Mosi_FirefoamSprayer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Vanilla Factions Expanded - Medieval 2</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFEM2_ThrowingAxe" and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFEM2_ThrowingAxe" and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VFEM2_ThrowingAxe"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFEM2_ThrowingAxe"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VFEM2_ThrowingAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Vanilla Weapons Expanded</li></mods>
+    <match Class="PatchOperationSequence"><operations>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" and not(modExtensions)]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" and not(modExtensions)]</xpath><value><modExtensions /></value></match></li>
+      <li Class="PatchOperationConditional"><xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><match Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]/modExtensions[not(li[@Class="ProgressionAmmunition.AmmoExtension"])]</xpath><value><li Class="ProgressionAmmunition.AmmoExtension" /></value></match></li>
+      <li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath><value><disableAmmo>true</disableAmmo></value></li>
+    </operations></match>
+  </Operation>
+</Patch>

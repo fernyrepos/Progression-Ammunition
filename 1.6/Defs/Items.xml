@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <OrderedTakeGroupDef>
+    <defName>PA_Refill</defName>
+    <label>refill</label>
+    <max>3</max>
+  </OrderedTakeGroupDef>
+
   <ThingDef Abstract="True" Name="PA_AmmoRefillBase" ParentName="ResourceBase">
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>
     <stackLimit>25</stackLimit>
+    <orderedTakeGroup>PA_Refill</orderedTakeGroup>
     <drawGUIOverlay>true</drawGUIOverlay>
     <graphicData>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.7</drawSize>
     </graphicData>
     <statBases>
@@ -27,7 +34,7 @@
     <label>arrow refill</label>
     <description>A compact quiver bundle of field replacement arrows.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/WoodLog</texPath>
+      <texPath>Things/Item/ProgressionAmmunition/ArrowRefill</texPath>
     </graphicData>
     <statBases>
       <MarketValue>25</MarketValue>
@@ -37,6 +44,7 @@
       <WoodLog>20</WoodLog>
     </costList>
     <recipeMaker>
+      <researchPrerequisite MayRequire="OskarPotocki.VFE.Tribals">VFET_Bow</researchPrerequisite>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>CraftingSpot</li>
@@ -51,7 +59,7 @@
     <label>ammo refill</label>
     <description>A portable pack of ammunition for industrial firearms.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Steel</texPath>
+      <texPath>Things/Item/ProgressionAmmunition/AmmoRefill</texPath>
     </graphicData>
     <statBases>
       <MarketValue>35</MarketValue>
@@ -61,6 +69,7 @@
       <Steel>20</Steel>
     </costList>
     <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
       <soundWorking>Recipe_Machining</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
@@ -73,7 +82,7 @@
     <label>charge refill</label>
     <description>A field power cell for recharging spacer weapons.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/ComponentIndustrial</texPath>
+      <texPath>Things/Item/ProgressionAmmunition/ChargeRefill</texPath>
     </graphicData>
     <statBases>
       <MarketValue>120</MarketValue>
@@ -83,6 +92,7 @@
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
     <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
       <soundWorking>Recipe_Machining</soundWorking>
       <recipeUsers>
         <li>FabricationBench</li>

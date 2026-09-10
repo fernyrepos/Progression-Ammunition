@@ -2,6 +2,10 @@
 <Defs>
   <ThingDef Abstract="True" Name="PA_AmmoRechargerBase" ParentName="BuildingBase">
     <thingClass>ProgressionAmmunition.Building_AmmoRecharger</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
@@ -12,6 +16,7 @@
     <designationCategory>Security</designationCategory>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
+      <Mass>30</Mass>
       <WorkToBuild>1000</WorkToBuild>
       <Flammability>0.5</Flammability>
     </statBases>
@@ -23,7 +28,7 @@
   <ThingDef ParentName="PA_AmmoRechargerBase">
     <defName>PA_ArrowBox</defName>
     <label>arrow cage</label>
-    <description>An infinite supply of arrows, placed in a small cage. Colonists can resupply arrows from this box.</description>
+    <description>An infinite supply of arrows, placed in a small cage. Colonists can resupply arrows from this station.</description>
     <graphicData>
       <texPath>Things/Building/ProgressionAmmunition/ArrowCage/ArrowCage</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -52,7 +57,7 @@
   <ThingDef ParentName="PA_AmmoRechargerBase">
     <defName>PA_AmmoBox</defName>
     <label>ammo crate</label>
-    <description>An infinite supply of ammunition, placed in a small box. Colonists can resupply ammo and grenades from this box.</description>
+    <description>An infinite supply of ammunition, stored in a metal crate. Colonists can resupply ammo and grenades from this box.</description>
     <graphicData>
       <texPath>Things/Building/ProgressionAmmunition/AmmoBox/AmmoBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -76,10 +81,9 @@
     <label>weapon charger</label>
     <description>A charging station for high-tech weaponry. Colonists can recharge weapons from this station.</description>
     <graphicData>
-      <texPath>Things/Building/Furniture/ShelfSmall</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <color>(120,180,220)</color>
+      <texPath>Things/Building/ProgressionAmmunition/WeaponCharger/WeaponCharger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <costList>
       <Steel>500</Steel>
@@ -88,7 +92,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>200</basePowerConsumption>
+        <basePowerConsumption>500</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable" />
     </comps>

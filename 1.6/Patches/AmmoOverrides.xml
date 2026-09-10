@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <Operation Class="PatchOperationAdd">
+  <!-- <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Bow_Great"]</xpath>
     <value>
       <modExtensions>
@@ -22,9 +22,9 @@
         </li>
       </modExtensions>
     </value>
-  </Operation>
+  </Operation> -->
 
-  <Operation Class="PatchOperationAdd">
+  <!-- <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Gun_ChargeRifle"]</xpath>
     <value>
       <modExtensions>
@@ -33,6 +33,6 @@
         </li>
       </modExtensions>
     </value>
-  </Operation>
+  </Operation> -->
 
 </Patch>

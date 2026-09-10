@@ -105,6 +105,31 @@ namespace ProgressionAmmunition
             }
         }
 
+        public SoundDef ReloadSound
+        {
+            get
+            {
+                switch (WeaponAmmoType)
+                {
+                    case AmmoType.Arrow:
+                        return DefsOf.PA_ReloadArrows;
+                    case AmmoType.Charge:
+                        return DefsOf.PA_ChargeWeapon;
+                    default:
+                        return DefsOf.Standard_Reload;
+                }
+            }
+        }
+
+        public void PlayReloadSound(Pawn pawn)
+        {
+            if (pawn?.Map == null)
+            {
+                return;
+            }
+            ReloadSound?.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+        }
+
         public IEnumerable<Gizmo> GetAmmoGizmos()
         {
             if (parent.def.IsRangedWeapon is false)
@@ -138,7 +163,7 @@ namespace ProgressionAmmunition
                         {
                             pawn.inventory.innerContainer.Take(item, 1).Destroy();
                             RefillAmmo();
-                            DefsOf.Standard_Reload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                            PlayReloadSound(pawn);
                         }
                     };
                     if (CurAmmo >= MaxAmmo)

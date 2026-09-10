@@ -27,7 +27,22 @@ namespace ProgressionAmmunition
             listing.Gap();
             listing.Label("PA_BaselineMaxAmmo".Translate(settings.baselineMaxAmmo));
             settings.baselineMaxAmmo = (int)listing.Slider(settings.baselineMaxAmmo, 1, 300);
+            listing.GapLine();
+            listing.Label("PA_SpawnRefillHeader".Translate());
+            ChanceSlider(listing, "PA_AnimalRefillChance", ref settings.animalRefillChance);
+            ChanceSlider(listing, "PA_NeolithicRefillChance", ref settings.neolithicRefillChance);
+            ChanceSlider(listing, "PA_MedievalRefillChance", ref settings.medievalRefillChance);
+            ChanceSlider(listing, "PA_IndustrialRefillChance", ref settings.industrialRefillChance);
+            ChanceSlider(listing, "PA_SpacerRefillChance", ref settings.spacerRefillChance);
+            ChanceSlider(listing, "PA_UltraRefillChance", ref settings.ultraRefillChance);
+            ChanceSlider(listing, "PA_ArchotechRefillChance", ref settings.archotechRefillChance);
             listing.End();
+        }
+
+        private static void ChanceSlider(Listing_Standard listing, string key, ref float value)
+        {
+            listing.Label(key.Translate(value.ToString("0")));
+            value = Mathf.Round(listing.Slider(value, 0f, 100f));
         }
     }
 }

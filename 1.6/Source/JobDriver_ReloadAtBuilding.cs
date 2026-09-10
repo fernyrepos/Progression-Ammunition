@@ -34,8 +34,9 @@ namespace ProgressionAmmunition
 
             yield return Toils_General.Do(() =>
             {
-                pawn.equipment.Primary.TryGetComp<CompAmmo>().RefillAmmo();
-                DefsOf.Standard_Reload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                var comp = pawn.equipment.Primary.TryGetComp<CompAmmo>();
+                comp.RefillAmmo();
+                comp.PlayReloadSound(pawn);
             });
         }
 

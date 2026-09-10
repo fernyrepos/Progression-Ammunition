@@ -89,7 +89,7 @@ namespace ProgressionAmmunition
                     {
                         pawn.inventory.innerContainer.Take(item, 1).Destroy();
                         compAmmo.RefillAmmo();
-                        DefsOf.Standard_Reload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                        compAmmo.PlayReloadSound(pawn);
                         return;
                     }
                 }

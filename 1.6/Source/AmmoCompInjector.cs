@@ -14,6 +14,11 @@ namespace ProgressionAmmunition
                 {
                     continue;
                 }
+                if (AmmoExtension.IsAmmoDisabledFor(def))
+                {
+                    def.comps?.RemoveAll(c => c is CompProperties_Ammo);
+                    continue;
+                }
                 def.comps ??= new List<CompProperties>();
                 if (def.comps.Any(c => c is CompProperties_Ammo))
                 {
