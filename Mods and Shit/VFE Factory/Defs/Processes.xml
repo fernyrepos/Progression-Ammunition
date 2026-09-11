@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PipeSystem.ProcessDef>
+		<defName>PA_MakeAmmoRefill</defName>
+		<label>Make ammo refill</label>
+		<description>A portable pack of ammunition for industrial firearms.</description>
+		<priorityInBillList>20</priorityInBillList>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<autoGrabFromHoppers>true</autoGrabFromHoppers>
+		<autoInputSlots>
+			<li>(-1,0,3)</li>
+			<li>(1,0,3)</li>
+		</autoInputSlots>
+		<ticks>1600</ticks>
+		<ingredients>
+			<li>
+				<thing>Steel</thing>
+				<countNeeded>20</countNeeded>
+			</li>
+		</ingredients>
+		<results>
+			<li>
+				<thing>PA_AmmoRefill</thing>
+				<count>1</count>
+			</li>
+		</results>
+		<isFactoryProcess>true</isFactoryProcess>
+		<autoExtract>true</autoExtract>
+		<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+		<researchPrerequisites>
+			<li>Gunsmithing</li>
+			<li>VFE_BasicFactories</li>
+		</researchPrerequisites>
+		<effecterWhenWorking>true</effecterWhenWorking>
+		<effecterDef>VFEFactory_Default</effecterDef>
+		<sustainerWhenWorking>true</sustainerWhenWorking>
+		<sustainerDef>VFEFactory_DefaultFactorySustainer</sustainerDef>
+		<maxOutputCount>25</maxOutputCount>
+	</PipeSystem.ProcessDef>
+	<PipeSystem.ProcessDef>
+		<defName>PA_MakeChargeRefill</defName>
+		<label>Make charge refill</label>
+		<description>A field power cell for recharging spacer weapons.</description>
+		<priorityInBillList>21</priorityInBillList>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<autoGrabFromHoppers>true</autoGrabFromHoppers>
+		<autoInputSlots>
+			<li>(-1,0,3)</li>
+			<li>(1,0,3)</li>
+		</autoInputSlots>
+		<ticks>1600</ticks>
+		<ingredients>
+			<li>
+				<thing>ComponentIndustrial</thing>
+				<countNeeded>4</countNeeded>
+			</li>
+		</ingredients>
+		<results>
+			<li>
+				<thing>PA_ChargeRefill</thing>
+				<count>1</count>
+			</li>
+		</results>
+		<isFactoryProcess>true</isFactoryProcess>
+		<autoExtract>true</autoExtract>
+		<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+		<researchPrerequisites>
+			<li>ChargedShot</li>
+			<li>VFE_BasicFactories</li>
+		</researchPrerequisites>
+		<effecterWhenWorking>true</effecterWhenWorking>
+		<effecterDef>VFEFactory_Default</effecterDef>
+		<sustainerWhenWorking>true</sustainerWhenWorking>
+		<sustainerDef>VFEFactory_DefaultFactorySustainer</sustainerDef>
+		<maxOutputCount>25</maxOutputCount>
+	</PipeSystem.ProcessDef>
+</Defs>

@@ -4,6 +4,7 @@
     <li>1.6</li>
     <li IfModActive="Ludeon.RimWorld.Ideology">Mods and Shit/Ideology</li>
     <li IfModActive="Ludeon.RimWorld.Biotech">Mods and Shit/Biotech</li>
+    <li IfModActive="VanillaExpanded.VFEFactory">Mods and Shit/VFE Factory</li>
     <li IfModActive="VanillaExpanded.VFESecurity">Mods and Shit/VFE Security</li>
     <li IfModActive="vanillaexpanded.skills">Mods and Shit/VSE</li>
   </v1.6>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VFEFactory_AutomatedAmmunitionPress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+		<value>
+			<li>PA_MakeAmmoRefill</li>
+			<li>PA_MakeChargeRefill</li>
+		</value>
+	</Operation>
+</Patch>
