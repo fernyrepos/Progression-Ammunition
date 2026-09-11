@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 	<VSE.Expertise.ExpertiseDef>
-		<defName>MaxAmmo</defName>
+		<defName>PA_AmmoHandling</defName>
 		<label>Ammo Handling</label>
 		<skill>Shooting</skill>
 		<description>An expertise in tactical inventory management, optimizing ammo handling.</description>

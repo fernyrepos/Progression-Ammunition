@@ -7,7 +7,7 @@
 	</IssueDef>
 
 	<PreceptDef>
-		<defName>PW_AmmoHandling_Improved</defName>
+		<defName>PA_AmmoHandling_Improved</defName>
 		<issue>PA_AmmoHandling</issue>
 		<label>improved</label>
 		<description>Efficient management of ammunition reserves and streamlined reloading drills ensure our fighters stay in the fight longer.</description>
@@ -24,7 +24,7 @@
 	</PreceptDef>
 
 	<PreceptDef>
-		<defName>PW_AmmoHandling_Neglected</defName>
+		<defName>PA_AmmoHandling_Neglected</defName>
 		<issue>PA_AmmoHandling</issue>
 		<label>neglected</label>
 		<description>We care little for military logistics and specialized ammunition maintenance, leaving our supplies unoptimized and slow to refill.</description>
