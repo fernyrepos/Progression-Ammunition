@@ -29,6 +29,8 @@ namespace ProgressionAmmunition
             listing.GapLine();
             listing.CheckboxLabeled("PA_ShowOnlyDrafted".Translate(), ref settings.showOnlyDrafted);
             listing.Gap();
+            listing.CheckboxLabeled("PA_AutoRefillWithConsumable".Translate(), ref settings.autoRefillWithConsumable);
+            listing.GapLine();
             listing.Label("PA_BaselineMaxAmmo".Translate(settings.baselineMaxAmmo));
             settings.baselineMaxAmmo = (int)listing.Slider(settings.baselineMaxAmmo, 1, 300);
             listing.GapLine();

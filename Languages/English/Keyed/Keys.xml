@@ -3,6 +3,7 @@
   <PA_EnableMod>Enable mod</PA_EnableMod>
   <PA_EnableModDesc>When off, the ammunition system is switched off: weapons fire without using ammo, the ammo gizmo and Assign tab column are hidden, NPCs stop spawning with refills, traders stop stocking them, and the recharger buildings and refill recipes disappear. Existing refill items and built rechargers are left in place.</PA_EnableModDesc>
   <PA_ShowOnlyDrafted>Show ammunition gizmo only while drafted</PA_ShowOnlyDrafted>
+  <PA_AutoRefillWithConsumable>Pawns automatically refill ammunition from consumables after using last shot</PA_AutoRefillWithConsumable>
   <PA_BaselineMaxAmmo>Baseline maximum ammunition carry: {0}</PA_BaselineMaxAmmo>
   <PA_AmmoRemaining>Ammo: {0} / {1}</PA_AmmoRemaining>
   <PA_AmmoFraction>{0} / {1}</PA_AmmoFraction>

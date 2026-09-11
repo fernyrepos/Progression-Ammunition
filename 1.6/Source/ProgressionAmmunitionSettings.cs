@@ -6,6 +6,7 @@ namespace ProgressionAmmunition
     {
         public bool enableMod = true;
         public bool showOnlyDrafted = true;
+        public bool autoRefillWithConsumable = true;
         public int baselineMaxAmmo = 30;
         public float animalRefillChance = 0f;
         public float neolithicRefillChance = 5f;
@@ -20,6 +21,7 @@ namespace ProgressionAmmunition
             base.ExposeData();
             Scribe_Values.Look(ref enableMod, "enableMod", true);
             Scribe_Values.Look(ref showOnlyDrafted, "showOnlyDrafted", true);
+            Scribe_Values.Look(ref autoRefillWithConsumable, "autoRefillWithConsumable", true);
             Scribe_Values.Look(ref baselineMaxAmmo, "baselineMaxAmmo", 30);
             Scribe_Values.Look(ref animalRefillChance, "animalRefillChance", 0f);
             Scribe_Values.Look(ref neolithicRefillChance, "neolithicRefillChance", 5f);
