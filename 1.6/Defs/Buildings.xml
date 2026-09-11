@@ -58,6 +58,7 @@
     <defName>PA_AmmoBox</defName>
     <label>ammo crate</label>
     <description>An infinite supply of ammunition, stored in a metal crate. Colonists can resupply ammo and grenades from this box.</description>
+	<tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/ProgressionAmmunition/AmmoBox/AmmoBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -66,6 +67,14 @@
     <costList>
       <Steel>300</Steel>
     </costList>
+	<comps>
+		<li Class="CompProperties_Explosive">
+			<wickTicks>240</wickTicks>
+			<explosiveRadius>3.9</explosiveRadius>
+			<explosiveDamageType>Bomb</explosiveDamageType>
+			<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+		</li>
+	</comps>
     <researchPrerequisites>
       <li>Gunsmithing</li>
     </researchPrerequisites>
@@ -80,6 +89,7 @@
     <defName>PA_WeaponCharger</defName>
     <label>weapon charger</label>
     <description>A charging station for high-tech weaponry. Colonists can recharge weapons from this station.</description>
+	<tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/ProgressionAmmunition/WeaponCharger/WeaponCharger</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -90,6 +100,12 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
+		<li Class="CompProperties_Explosive">
+			<wickTicks>240</wickTicks>
+			<explosiveRadius>3.9</explosiveRadius>
+			<explosiveDamageType>Bomb</explosiveDamageType>
+			<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+		</li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>
