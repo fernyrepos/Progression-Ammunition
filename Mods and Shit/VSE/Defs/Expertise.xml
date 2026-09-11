@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VSE.Expertise.ExpertiseDef>
+		<defName>MaxAmmo</defName>
+		<label>Ammo Handling</label>
+		<skill>Shooting</skill>
+		<description>An expertise in tactical inventory management, optimizing ammo handling.</description>
+		<statOffsets>
+			<PA_MaxAmmoFactor>+0.025</PA_MaxAmmoFactor>
+			<PA_AmmoRefillSpeed>+0.025</PA_AmmoRefillSpeed>
+		</statOffsets>
+	</VSE.Expertise.ExpertiseDef>
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/roleEffects</xpath>
+		<value>
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>PA_MaxAmmoFactor</statDef>
+				<modifier>0.5</modifier>
+			</li>
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>PA_AmmoRefillSpeed</statDef>
+				<modifier>0.25</modifier>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffDef[defName="MarksmanCommandBuff"]/stages/li/statOffsets</xpath>
+		<value>
+			<PA_AmmoRefillSpeed>0.2</PA_AmmoRefillSpeed>
+		</value>
+	</Operation>
+</Patch>

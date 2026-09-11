@@ -1,4 +1,6 @@
+using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.Sound;
@@ -8,7 +10,7 @@ namespace ProgressionAmmunition
     public class JobDriver_ReloadAtBuilding : JobDriver
     {
         private const TargetIndex BuildingInd = TargetIndex.A;
-        private const int ReloadTicks = 600;
+        private const int BaseReloadTicks = 600;
 
         private Building_AmmoRecharger Recharger => (Building_AmmoRecharger)job.GetTarget(BuildingInd).Thing;
 
@@ -27,8 +29,11 @@ namespace ProgressionAmmunition
             });
 
             yield return Toils_Goto.GotoThing(BuildingInd, PathEndMode.Touch);
+            
+            float reloadSpeed = pawn.GetStatValue(DefsOf.PA_AmmoRefillSpeed);
+            int reloadTicks = Mathf.RoundToInt(BaseReloadTicks / Mathf.Max(reloadSpeed, 0.1f));
 
-            var waitToil = Toils_General.Wait(ReloadTicks, BuildingInd);
+            var waitToil = Toils_General.Wait(reloadTicks, BuildingInd);
             waitToil.WithProgressBarToilDelay(BuildingInd);
             yield return waitToil;
 
