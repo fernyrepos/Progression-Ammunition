@@ -103,7 +103,7 @@
 		<li Class="CompProperties_Explosive">
 			<wickTicks>240</wickTicks>
 			<explosiveRadius>3.9</explosiveRadius>
-			<explosiveDamageType>Bomb</explosiveDamageType>
+			<explosiveDamageType>EMP</explosiveDamageType>
 			<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
 		</li>
       <li Class="CompProperties_Power">
