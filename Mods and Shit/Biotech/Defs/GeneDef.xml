@@ -2,9 +2,9 @@
 <Defs>
 	<GeneDef>
 		<defName>PA_AmmoOverclock</defName>
-		<label>munitions overclock</label>
+		<label>Improved munition handling</label>
 		<labelShortAdj>overclocked</labelShortAdj>
-		<description>Synaptic overclocking synchronizes fine-motor control with weapon telemetry, enabling denser ammo stockpiling and faster ammo handling.</description>
+		<description>Carriers of this gene have fine-motor control with weapon telemetry, enabling denser ammo stockpiling and faster ammo handling.</description>
 		<iconPath>UI/Genes/PA_AmmoOverclock</iconPath>
 		<geneClass>Gene</geneClass>
 		<biostatMet>1</biostatMet>
