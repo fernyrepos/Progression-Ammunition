@@ -167,9 +167,7 @@ namespace ProgressionAmmunition
                         icon = consumable.uiIcon,
                         action = () =>
                         {
-                            pawn.inventory.innerContainer.Take(item, 1).Destroy();
-                            RefillAmmo();
-                            PlayReloadSound(pawn);
+                            TryRefillAmmoFromConsumable();
                         }
                     };
                     if (CurAmmo >= MaxAmmo)
@@ -178,6 +176,24 @@ namespace ProgressionAmmunition
                     }
                     yield return cmd;
                 }
+            }
+        }
+
+        public void TryRefillAmmoFromConsumable()
+        {
+            if (Holder is Pawn pawn)
+            {
+                var consumable = ConsumableDef;
+                if (consumable == null)
+                    return;
+
+                var item = pawn.inventory.innerContainer.FirstOrFallback(t => t.def == consumable);
+                if (item == null)
+                    return;
+
+                pawn.inventory.innerContainer.Take(item, 1).Destroy();
+                RefillAmmo();
+                PlayReloadSound(pawn);
             }
         }
 

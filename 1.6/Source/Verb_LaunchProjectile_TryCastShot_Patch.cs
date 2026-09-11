@@ -28,6 +28,10 @@ namespace ProgressionAmmunition
                 if (comp != null)
                 {
                     comp.ConsumeAmmo();
+                    if (ProgressionAmmunitionMod.settings.autoRefillWithConsumable && comp.CurAmmo <= 0)
+                    {
+                        comp.TryRefillAmmoFromConsumable();
+                    }
                 }
             }
         }
