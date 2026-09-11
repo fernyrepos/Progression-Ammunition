@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>PA_AmmoOverclock</defName>
+		<label>munitions overclock</label>
+		<labelShortAdj>overclocked</labelShortAdj>
+		<description>Synaptic overclocking synchronizes fine-motor control with weapon telemetry, enabling denser ammo stockpiling and faster ammo handling.</description>
+		<iconPath>UI/Genes/PA_AmmoOverclock</iconPath>
+		<geneClass>Gene</geneClass>
+		<biostatMet>1</biostatMet>
+		<statOffsets>
+			<PA_MaxAmmoFactor>+0.5</PA_MaxAmmoFactor>
+			<PA_AmmoRefillSpeed>+0.25</PA_AmmoRefillSpeed>
+		</statOffsets>
+	</GeneDef>
+</Defs>
