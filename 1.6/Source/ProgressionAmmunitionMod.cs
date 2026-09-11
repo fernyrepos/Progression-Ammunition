@@ -8,6 +8,8 @@ namespace ProgressionAmmunition
     {
         public static ProgressionAmmunitionSettings settings;
 
+        public static bool Enabled => settings == null || settings.enableMod;
+
         public ProgressionAmmunitionMod(ModContentPack pack) : base(pack)
         {
             settings = GetSettings<ProgressionAmmunitionSettings>();
@@ -23,6 +25,8 @@ namespace ProgressionAmmunition
         {
             var listing = new Listing_Standard();
             listing.Begin(inRect);
+            listing.CheckboxLabeled("PA_EnableMod".Translate(), ref settings.enableMod, "PA_EnableModDesc".Translate());
+            listing.GapLine();
             listing.CheckboxLabeled("PA_ShowOnlyDrafted".Translate(), ref settings.showOnlyDrafted);
             listing.Gap();
             listing.Label("PA_BaselineMaxAmmo".Translate(settings.baselineMaxAmmo));
@@ -37,6 +41,12 @@ namespace ProgressionAmmunition
             ChanceSlider(listing, "PA_UltraRefillChance", ref settings.ultraRefillChance);
             ChanceSlider(listing, "PA_ArchotechRefillChance", ref settings.archotechRefillChance);
             listing.End();
+        }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            RefillUtility.ApplyEnabledState();
         }
 
         private static void ChanceSlider(Listing_Standard listing, string key, ref float value)

@@ -9,7 +9,7 @@ namespace ProgressionAmmunition
     {
         public static void Postfix(Pawn pawn, ref bool __result)
         {
-            if (__result is false || pawn.IsColonist is false || pawn.Faction != Faction.OfPlayer) return;
+            if (__result is false || ProgressionAmmunitionMod.Enabled is false || pawn.IsColonist is false || pawn.Faction != Faction.OfPlayer) return;
             var comp = pawn.equipment?.Primary?.TryGetComp<CompAmmo>();
             if (comp != null && comp.CurAmmo < 1) __result = false;
         }

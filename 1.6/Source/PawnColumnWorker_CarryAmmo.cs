@@ -9,6 +9,8 @@ namespace ProgressionAmmunition
     {
         private const int TopAreaHeight = 65;
 
+        public override bool VisibleCurrently => ProgressionAmmunitionMod.Enabled;
+
         public override void DoCell(Rect rect, Pawn pawn, PawnTable table)
         {
             if (pawn.inventoryStock != null)

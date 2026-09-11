@@ -9,7 +9,7 @@ namespace ProgressionAmmunition
     {
         public static void Postfix(Verb __instance, ref bool __result)
         {
-            if (__result && __instance.IsMeleeAttack is false && __instance.CasterPawn is Pawn pawn && pawn.IsColonist && pawn.Faction == Faction.OfPlayer)
+            if (__result && ProgressionAmmunitionMod.Enabled && __instance.IsMeleeAttack is false && __instance.CasterPawn is Pawn pawn && pawn.IsColonist && pawn.Faction == Faction.OfPlayer)
             {
                 var comp = __instance.EquipmentSource?.TryGetComp<CompAmmo>();
                 if (comp != null && comp.CurAmmo <= 0)

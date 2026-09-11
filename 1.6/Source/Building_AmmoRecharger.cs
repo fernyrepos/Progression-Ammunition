@@ -15,7 +15,7 @@ namespace ProgressionAmmunition
 
         public bool CanRecharge(CompAmmo ammo)
         {
-            if (ammo.WeaponAmmoType != RechargerAmmoType || IsPowered is false || ammo.CurAmmo >= ammo.MaxAmmo) return false;
+            if (ProgressionAmmunitionMod.Enabled is false || ammo.WeaponAmmoType != RechargerAmmoType || IsPowered is false || ammo.CurAmmo >= ammo.MaxAmmo) return false;
             return true;
         }
 
@@ -26,7 +26,7 @@ namespace ProgressionAmmunition
                 yield return opt;
             }
 
-            if (selPawn.IsColonistPlayerControlled is false) yield break;
+            if (ProgressionAmmunitionMod.Enabled is false || selPawn.IsColonistPlayerControlled is false) yield break;
 
             var weapon = selPawn.equipment?.Primary;
             var ammoComp = weapon?.TryGetComp<CompAmmo>();

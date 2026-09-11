@@ -4,6 +4,7 @@ namespace ProgressionAmmunition
 {
     public class ProgressionAmmunitionSettings : ModSettings
     {
+        public bool enableMod = true;
         public bool showOnlyDrafted = true;
         public int baselineMaxAmmo = 30;
         public float animalRefillChance = 0f;
@@ -17,6 +18,7 @@ namespace ProgressionAmmunition
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look(ref enableMod, "enableMod", true);
             Scribe_Values.Look(ref showOnlyDrafted, "showOnlyDrafted", true);
             Scribe_Values.Look(ref baselineMaxAmmo, "baselineMaxAmmo", 30);
             Scribe_Values.Look(ref animalRefillChance, "animalRefillChance", 0f);

@@ -132,7 +132,7 @@ namespace ProgressionAmmunition
 
         public IEnumerable<Gizmo> GetAmmoGizmos()
         {
-            if (parent.def.IsRangedWeapon is false)
+            if (ProgressionAmmunitionMod.Enabled is false || parent.def.IsRangedWeapon is false)
             {
                 yield break;
             }
@@ -177,7 +177,7 @@ namespace ProgressionAmmunition
 
         public override string CompInspectStringExtra()
         {
-            if (parent.def.IsRangedWeapon is false) return null;
+            if (ProgressionAmmunitionMod.Enabled is false || parent.def.IsRangedWeapon is false) return null;
             var pawn = Holder;
             if (pawn == null || pawn.IsColonist is false || pawn.Faction != Faction.OfPlayer)
             {
