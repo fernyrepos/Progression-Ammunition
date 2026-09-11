@@ -9,7 +9,7 @@
 		<minValue>0.1</minValue>
 		<maxValue>5.0</maxValue>
 		<toStringStyle>PercentOne</toStringStyle>
-		<toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
+		<toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
 	</StatDef>
 	<StatDef>
 		<defName>PA_AmmoRefillSpeed</defName>
@@ -20,6 +20,9 @@
 		<minValue>0.1</minValue>
 		<maxValue>5.0</maxValue>
 		<toStringStyle>PercentOne</toStringStyle>
-		<toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
+		<toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
+		<parts>
+			<li Class="ProgressionAmmunition.StatPart_AmmoRefillSpeedShooting" />
+		</parts>
 	</StatDef>
 </Defs>
