@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffDef[defName="VPE_FiringFocus"]/stages/li/statFactors</xpath>
+		<value>
+			<PA_AmmoRefillSpeed>1.8</PA_AmmoRefillSpeed>
+		</value>
+	</Operation>
+</Patch>
