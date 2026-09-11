@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>PA_ArrowRefillDrop</defName>
+		<label>arrow refill drop</label>
+		<description>Call for a drop of 50 arrow refills.</description>
+		<minTitle>Acolyte</minTitle>
+		<faction>Empire</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,9)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<PA_ArrowRefill>50</PA_ArrowRefill>
+			</itemsToDrop>
+			<favorCost>4</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+	<RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>PA_AmmoRefillDrop</defName>
+		<label>ammo refill drop</label>
+		<description>Call for a drop of 50 ammo refills.</description>
+		<minTitle>Acolyte</minTitle>
+		<faction>Empire</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,9)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<PA_AmmoRefill>50</PA_AmmoRefill>
+			</itemsToDrop>
+			<favorCost>6</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+	<RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>PA_ChargeRefillDrop</defName>
+		<label>charge refill drop</label>
+		<description>Call for a drop of 50 charge refills.</description>
+		<minTitle>Acolyte</minTitle>
+		<faction>Empire</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(2,9)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<PA_ChargeRefill>50</PA_ChargeRefill>
+			</itemsToDrop>
+			<favorCost>8</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+</Defs>
