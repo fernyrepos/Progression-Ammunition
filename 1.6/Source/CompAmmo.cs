@@ -1,5 +1,6 @@
-using System.Collections.Generic;
 using RimWorld;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -8,6 +9,8 @@ namespace ProgressionAmmunition
 {
     public class CompAmmo : ThingComp
     {
+        private const float BurstShotMaxAmmoMultiplier = 1f; // only used for weapons without AmmoExtension.maxAmmo
+        private const int MaxBurstShotCountForAmmoScaling = 10;
         private int curAmmo = -1;
         public float autoReloadThreshold = 0.5f;
 
@@ -18,7 +21,8 @@ namespace ProgressionAmmunition
             get
             {
                 var ext = parent.def.GetModExtension<AmmoExtension>();
-                float ammo = (ext != null && ext.maxAmmo > 0) ? ext.maxAmmo : ProgressionAmmunitionMod.settings.baselineMaxAmmo;
+                float burstShotBonusMaxAmmo = ProgressionAmmunitionMod.settings.baselineMaxAmmo * Mathf.Max((Math.Clamp(GetBurstShotCount(), 1, MaxBurstShotCountForAmmoScaling) - 1) * BurstShotMaxAmmoMultiplier, 0);
+                float ammo = (ext != null && ext.maxAmmo > 0) ? ext.maxAmmo : ProgressionAmmunitionMod.settings.baselineMaxAmmo + burstShotBonusMaxAmmo;
 
                 var pawn = Holder;
                 if (pawn != null)
@@ -30,6 +34,15 @@ namespace ProgressionAmmunition
 
                 return Mathf.Max(1, Mathf.RoundToInt(ammo));
             }
+        }
+
+        private int GetBurstShotCount()
+        {
+            // TODO VWE has unique traits that can override Verb_Shoot and its burstShotCount. Those overrides are not handled right now
+
+            VerbProperties verbProps = parent.def.verbs.FirstOrDefault(v => v.verbClass != null && typeof(Verb_Shoot).IsAssignableFrom(v.verbClass));
+            int burstShotCount = (verbProps != null) ? verbProps.burstShotCount : 1;
+            return burstShotCount;
         }
 
         public AmmoType WeaponAmmoType
