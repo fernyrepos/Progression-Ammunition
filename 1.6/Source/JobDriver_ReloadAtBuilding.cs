@@ -10,7 +10,7 @@ namespace ProgressionAmmunition
     public class JobDriver_ReloadAtBuilding : JobDriver
     {
         private const TargetIndex BuildingInd = TargetIndex.A;
-        private const int BaseReloadTicks = 600;
+        private const int BaseReloadTicks = 300;
 
         private Building_AmmoRecharger Recharger => (Building_AmmoRecharger)job.GetTarget(BuildingInd).Thing;
 
