@@ -10,6 +10,8 @@ namespace ProgressionAmmunition
 
         public static bool Enabled => settings == null || settings.enableMod;
 
+        public static bool AddRefillBuildingsToScenarios => Enabled && (settings == null || settings.addRefillBuildingsToScenarios);
+
         public ProgressionAmmunitionMod(ModContentPack pack) : base(pack)
         {
             settings = GetSettings<ProgressionAmmunitionSettings>();
@@ -30,9 +32,12 @@ namespace ProgressionAmmunition
             listing.CheckboxLabeled("PA_ShowOnlyDrafted".Translate(), ref settings.showOnlyDrafted);
             listing.Gap();
             listing.CheckboxLabeled("PA_AutoRefillWithConsumable".Translate(), ref settings.autoRefillWithConsumable);
+            listing.Gap();
+            listing.CheckboxLabeled("PA_AddRefillBuildingsToScenarios".Translate(), ref settings.addRefillBuildingsToScenarios, "PA_AddRefillBuildingsToScenariosDesc".Translate());
             listing.GapLine();
             listing.Label("PA_BaselineMaxAmmo".Translate(settings.baselineMaxAmmo));
             settings.baselineMaxAmmo = (int)listing.Slider(settings.baselineMaxAmmo, 1, 300);
+            listing.CheckboxLabeled("PA_ScaleMaxAmmoByBurstShotCount".Translate(), ref settings.scaleMaxAmmoByBurstShotCount, "PA_ScaleMaxAmmoByBurstShotCountDesc".Translate());
             listing.GapLine();
             listing.Label("PA_SpawnRefillHeader".Translate());
             ChanceSlider(listing, "PA_AnimalRefillChance", ref settings.animalRefillChance);

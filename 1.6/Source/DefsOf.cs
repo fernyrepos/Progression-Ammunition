@@ -16,6 +16,7 @@ namespace ProgressionAmmunition
         public static StatDef PA_MaxAmmoFactor;
         public static StatDef PA_AmmoRefillSpeed;
         public static InventoryStockGroupDef PA_AmmoStock;
+        public static ScenPartDef StartingThing_Defined;
         static DefsOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(DefsOf));

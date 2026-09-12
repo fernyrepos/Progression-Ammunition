@@ -21,7 +21,7 @@ namespace ProgressionAmmunition
             get
             {
                 var ext = parent.def.GetModExtension<AmmoExtension>();
-                float burstShotBonusMaxAmmo = ProgressionAmmunitionMod.settings.baselineMaxAmmo * Mathf.Max((Math.Clamp(GetBurstShotCount(), 1, MaxBurstShotCountForAmmoScaling) - 1) * BurstShotMaxAmmoMultiplier, 0);
+                float burstShotBonusMaxAmmo = ProgressionAmmunitionMod.settings.scaleMaxAmmoByBurstShotCount is false ? 0f : ProgressionAmmunitionMod.settings.baselineMaxAmmo * Mathf.Max((Math.Clamp(GetBurstShotCount(), 1, MaxBurstShotCountForAmmoScaling) - 1) * BurstShotMaxAmmoMultiplier, 0);
                 float ammo = (ext != null && ext.maxAmmo > 0) ? ext.maxAmmo : ProgressionAmmunitionMod.settings.baselineMaxAmmo + burstShotBonusMaxAmmo;
 
                 var pawn = Holder;
@@ -45,26 +45,7 @@ namespace ProgressionAmmunition
             return burstShotCount;
         }
 
-        public AmmoType WeaponAmmoType
-        {
-            get
-            {
-                var ext = parent.def.GetModExtension<AmmoExtension>();
-                if (ext?.ammoType != null)
-                {
-                    return ext.ammoType.Value;
-                }
-                if (parent.def.techLevel <= TechLevel.Medieval)
-                {
-                    return AmmoType.Arrow;
-                }
-                if (parent.def.techLevel <= TechLevel.Industrial)
-                {
-                    return AmmoType.Ammo;
-                }
-                return AmmoType.Charge;
-            }
-        }
+        public AmmoType WeaponAmmoType => parent.def.WeaponAmmoType();
 
         public int CurAmmo
         {

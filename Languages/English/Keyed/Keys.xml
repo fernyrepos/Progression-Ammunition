@@ -4,7 +4,11 @@
   <PA_EnableModDesc>When off, the ammunition system is switched off: weapons fire without using ammo, the ammo gizmo and Assign tab column are hidden, NPCs stop spawning with refills, traders stop stocking them, and the recharger buildings and refill recipes disappear. Existing refill items and built rechargers are left in place.</PA_EnableModDesc>
   <PA_ShowOnlyDrafted>Show ammunition gizmo only while drafted</PA_ShowOnlyDrafted>
   <PA_AutoRefillWithConsumable>Automatically use refill packs</PA_AutoRefillWithConsumable>
+  <PA_AddRefillBuildingsToScenarios>Automatically add refill buildings to scenarios</PA_AddRefillBuildingsToScenarios>
+  <PA_AddRefillBuildingsToScenariosDesc>Scenarios that start you with ranged weapons also give you one uninstalled refill building for each ammo type those weapons use.</PA_AddRefillBuildingsToScenariosDesc>
   <PA_BaselineMaxAmmo>Baseline maximum ammunition carry: {0}</PA_BaselineMaxAmmo>
+  <PA_ScaleMaxAmmoByBurstShotCount>Automatically scale ammo maximum by burstShotCount</PA_ScaleMaxAmmoByBurstShotCount>
+  <PA_ScaleMaxAmmoByBurstShotCountDesc>Weapons that fire bursts get extra maximum ammo: one extra baseline amount per shot beyond the first, counting up to 10 shots. Weapons with a set maxAmmo are not affected.</PA_ScaleMaxAmmoByBurstShotCountDesc>
   <PA_AmmoRemaining>Ammo: {0} / {1}</PA_AmmoRemaining>
   <PA_AmmoFraction>{0} / {1}</PA_AmmoFraction>
   <PA_AmmoGizmoTooltip>Ammo: {0} / {1}\nAuto reload threshold: {2}%</PA_AmmoGizmoTooltip>
