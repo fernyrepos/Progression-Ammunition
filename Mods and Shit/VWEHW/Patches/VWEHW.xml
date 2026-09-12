@@ -2,18 +2,18 @@
 <Patch>
   <!-- Autocannon -->
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]</xpath>
       <value>
         <modExtensions />
       </value>
     </nomatch>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions</xpath>
       <value>
         <li Class="ProgressionAmmunition.AmmoExtension">
           <disableAmmo>true</disableAmmo>
@@ -21,15 +21,15 @@
       </value>
     </nomatch>
     <match Class="PatchOperationConditional">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
       <match Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
       </match>
       <nomatch Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_Autocannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
@@ -39,18 +39,18 @@
   
   <!-- Handheld Mortar -->
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]</xpath>
       <value>
         <modExtensions />
       </value>
     </nomatch>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions</xpath>
       <value>
         <li Class="ProgressionAmmunition.AmmoExtension">
           <disableAmmo>true</disableAmmo>
@@ -58,15 +58,15 @@
       </value>
     </nomatch>
     <match Class="PatchOperationConditional">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
       <match Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
       </match>
       <nomatch Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_HandheldMortar"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
@@ -76,18 +76,18 @@
   
   <!-- Heavy Flamer -->
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]</xpath>
       <value>
         <modExtensions />
       </value>
     </nomatch>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions</xpath>
       <value>
         <li Class="ProgressionAmmunition.AmmoExtension">
           <disableAmmo>true</disableAmmo>
@@ -95,15 +95,15 @@
       </value>
     </nomatch>
     <match Class="PatchOperationConditional">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
       <match Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
       </match>
       <nomatch Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_HeavyFlamer"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
@@ -113,18 +113,18 @@
   
   <!-- Swarm Missile Launcher -->
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]</xpath>
       <value>
         <modExtensions />
       </value>
     </nomatch>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions</xpath>
       <value>
         <li Class="ProgressionAmmunition.AmmoExtension">
           <disableAmmo>true</disableAmmo>
@@ -132,15 +132,15 @@
       </value>
     </nomatch>
     <match Class="PatchOperationConditional">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
       <match Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
       </match>
       <nomatch Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_SwarmMissileLauncher"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
@@ -150,18 +150,18 @@
   
   <!-- Uranium slug rifle -->
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]</xpath>
       <value>
         <modExtensions />
       </value>
     </nomatch>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions</xpath>
       <value>
         <li Class="ProgressionAmmunition.AmmoExtension">
           <disableAmmo>true</disableAmmo>
@@ -169,15 +169,15 @@
       </value>
     </nomatch>
     <match Class="PatchOperationConditional">
-      <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+      <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
       <match Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/disableAmmo</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
       </match>
       <nomatch Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <xpath>Defs/ThingDef[defName="VWE_Gun_UraniumSlugRifle"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
         <value>
           <disableAmmo>true</disableAmmo>
         </value>
