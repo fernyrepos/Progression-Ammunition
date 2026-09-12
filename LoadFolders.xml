@@ -10,5 +10,6 @@
     <li IfModActive="VanillaExpanded.VPsycastsE">Mods and Shit/VPE</li>
     <li IfModActive="vanillaexpanded.skills">Mods and Shit/VSE</li>
     <li IfModActive="VanillaExpanded.VWE">Mods and Shit/VWE</li>
+    <li IfModActive="VanillaExpanded.VWEHW">Mods and Shit/VWEHW</li>
   </v1.6>
 </loadFolders>
