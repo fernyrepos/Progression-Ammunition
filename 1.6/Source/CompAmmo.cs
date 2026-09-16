@@ -223,12 +223,7 @@ namespace ProgressionAmmunition
         public override string CompInspectStringExtra()
         {
             var pawn = Holder;
-            if (pawn == null || !parent.def.IsRangedWeapon || !RefillUtility.DoesPawnUseAmmo(pawn))
-            {
-                return null;
-            }
-
-            if (!DebugSettings.godMode && !pawn.IsPlayerControlled)
+            if (pawn != null || !parent.def.IsRangedWeapon || AmmoExtension.IsAmmoDisabledFor(parent.def))
             {
                 return null;
             }
