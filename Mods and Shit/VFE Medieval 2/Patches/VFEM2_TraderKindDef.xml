@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="VFEM2_Caravan_Medieval_Weaponsmith"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>1~5</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="VFEM2_Base_Medieval_Standard"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>2~10</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+</Patch>

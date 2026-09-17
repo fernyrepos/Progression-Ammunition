@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="DankPyon_Base_Medieval_Roxmont"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>2~10</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+</Patch>

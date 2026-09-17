@@ -12,6 +12,7 @@
     </thingCategories>
     <stackLimit>25</stackLimit>
     <orderedTakeGroup>PA_Refill</orderedTakeGroup>
+    <tradeability>Buyable</tradeability>
     <drawGUIOverlay>true</drawGUIOverlay>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>

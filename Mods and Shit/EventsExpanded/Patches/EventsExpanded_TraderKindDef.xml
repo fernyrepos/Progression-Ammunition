@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="LE_BlackMarket_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>5~20</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+        <countRange>5~20</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ChargeRefill</thingDef>
+        <countRange>5~20</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ChargeRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+</Patch>
