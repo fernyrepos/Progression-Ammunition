@@ -6,4 +6,11 @@
     <reportString>reloading at TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+	<defName>PA_EquipFromCorpse</defName>
+	<driverClass>ProgressionAmmunition.JobDriver_EquipFromCorpse</driverClass>
+	<reportString>scavenging corpse of of TargetA.</reportString>
+	<checkOverrideOnDamage>Always</checkOverrideOnDamage>
+  </JobDef>
 </Defs>

@@ -7,6 +7,7 @@ namespace ProgressionAmmunition
     public static class DefsOf
     {
         public static JobDef PA_ReloadAtBuilding;
+        public static JobDef PA_EquipFromCorpse;
         public static ThingDef PA_ArrowRefill;
         public static ThingDef PA_AmmoRefill;
         public static ThingDef PA_ChargeRefill;
