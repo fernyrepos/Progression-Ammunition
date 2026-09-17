@@ -7,6 +7,7 @@
   <PA_ShowOnlyDrafted>Show ammunition gizmo only while drafted</PA_ShowOnlyDrafted>
   <PA_RefillBuildingsAreInfinite>Refill buildings have infinite refills</PA_RefillBuildingsAreInfinite>
   <PA_RefillBuildingsAreInfiniteDesc>If disabled, refill buildings have limited amount of refills, and need to be restocked using craftable refill packs of the corresponding ammo type.</PA_RefillBuildingsAreInfiniteDesc>
+  <PA_WeaponChargersAreInfinite>Weapon chargers have infinite refills</PA_WeaponChargersAreInfinite>
   <PA_AutoRefillWithConsumable>Automatically use refill packs</PA_AutoRefillWithConsumable>
   <PA_AddRefillBuildingsToScenarios>Automatically add refill buildings to scenarios</PA_AddRefillBuildingsToScenarios>
   <PA_AddRefillBuildingsToScenariosDesc>Scenarios that start you with ranged weapons also give you one uninstalled refill building for each ammo type those weapons use.</PA_AddRefillBuildingsToScenariosDesc>

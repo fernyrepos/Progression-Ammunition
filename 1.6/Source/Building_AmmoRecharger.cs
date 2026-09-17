@@ -18,15 +18,28 @@ namespace ProgressionAmmunition
             if (ProgressionAmmunitionMod.Enabled is false || ammo.WeaponAmmoType != RechargerAmmoType || IsPowered is false || ammo.CurAmmo >= ammo.MaxAmmo)
                 return false;
 
-            if (!ProgressionAmmunitionMod.settings.refillBuildingsAreInfinite && this.TryGetComp<CompRefuelable>(out var compRefuelable))
+            if (!HasInfiniteRefills() && this.TryGetComp<CompRefuelable>(out var compRefuelable))
+            {
                 return compRefuelable.Fuel >= 1f;
+            }
 
             return true;
         }
 
-        public void ConsumeAmmoRefill()
+        public bool HasInfiniteRefills()
         {
             if (ProgressionAmmunitionMod.settings.refillBuildingsAreInfinite)
+                return true;
+
+            if (ProgressionAmmunitionMod.settings.weaponChargersAreInfinite && RechargerAmmoType == AmmoType.Charge)
+                return true;
+
+            return false;
+        }
+
+        public void ConsumeAmmoRefill()
+        {
+            if (HasInfiniteRefills())
                 return;
 
             if (this.TryGetComp<CompRefuelable>(out var compRefuelable))
@@ -63,7 +76,7 @@ namespace ProgressionAmmunition
             {
                 yield return new FloatMenuOption("PA_AmmoAlreadyFull".Translate(), null);
             }
-            else if (!ProgressionAmmunitionMod.settings.refillBuildingsAreInfinite && this.TryGetComp<CompRefuelable>(out var compRefuelable) && compRefuelable.Fuel < 1f)
+            else if (!HasInfiniteRefills() && this.TryGetComp<CompRefuelable>(out var compRefuelable) && compRefuelable.Fuel < 1f)
             {
                 yield return new FloatMenuOption("PA_AmmoBoxOutOfAmmo".Translate(), null);
             }
