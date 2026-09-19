@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Knife -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </nomatch>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Mace -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </nomatch>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Axe -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </nomatch>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Axe"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- VFEC Dagger -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Classical</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEC_MeleeWeapon_Dagger"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VFES Tomahawk -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Settlers</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFES_Tomahawk"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Axe -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Baton -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Combat Knife -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Shiv -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shiv"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Shovel -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Stun Baton -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Non-Lethal</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_StunBaton"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Tribal Axe -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Tribal</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_TribalAxe"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- MO Butcher Cleaver -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_ButcherCleaver"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- MO Fighting Axe -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_FightingAxe"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- MO Woodcutters Axe -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_WoodcuttersAxe"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -7,6 +7,7 @@ namespace ProgressionAmmunition
         public AmmoType? ammoType;
         public int maxAmmo = -1;
         public bool disableAmmo;
+        public bool canBeBackupWeapon = false;
 
         public static bool IsAmmoDisabledFor(ThingDef def)
         {

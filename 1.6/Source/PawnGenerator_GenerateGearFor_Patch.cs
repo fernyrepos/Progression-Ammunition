@@ -4,43 +4,50 @@ using Verse;
 
 namespace ProgressionAmmunition
 {
-    [HarmonyPatch(typeof(PawnGenerator), "GenerateGearFor")]
+    [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GenerateGearFor))]
     public static class PawnGenerator_GenerateGearFor_Patch
     {
         public static void Postfix(Pawn pawn)
         {
-            if (ProgressionAmmunitionMod.Enabled is false || pawn?.inventory == null || (pawn.Faction != null && pawn.Faction.IsPlayer))
+            if (pawn?.inventory == null || pawn?.Faction?.IsPlayer == true || !RefillUtility.DoesPawnUseAmmo(pawn))
             {
                 return;
             }
 
-            var refill = RefillFor(pawn);
-            if (refill == null)
+            // Refills
+            var refill = GetRefillItemDefForPawn(pawn);
+            if (refill != null)
             {
-                return;
+                if (Rand.Chance(ChanceForRefill(pawn) / 100f))
+                {
+                    Thing thing = ThingMaker.MakeThing(refill);
+                    thing.stackCount = 1;
+                    if (!pawn.inventory.innerContainer.TryAdd(thing))
+                        thing.Destroy();
+                }
             }
 
-            if (Rand.Chance(ChanceFor(pawn) / 100f) is false)
+            // Backup Weapons
+            if (ProgressionAmmunitionMod.settings.canAIPawnsBringBackupWeapons)
             {
-                return;
-            }
-
-            var thing = ThingMaker.MakeThing(refill);
-            thing.stackCount = 1;
-            if (pawn.inventory.innerContainer.TryAdd(thing) is false)
-            {
-                thing.Destroy();
+                ThingDef backupWeaponDef = OutOfAmmoUtility.GetBackupWeaponDefForPawn(pawn);
+                if (backupWeaponDef != null)
+                {
+                    Thing backupWeapon = ThingMaker.MakeThing(backupWeaponDef, backupWeaponDef.MadeFromStuff ? GenStuff.DefaultStuffFor(backupWeaponDef) : null);
+                    if (!pawn.inventory.innerContainer.TryAdd(backupWeapon))
+                        backupWeapon.Destroy();
+                }
             }
         }
 
-        private static float ChanceFor(Pawn pawn)
+        private static float ChanceForRefill(Pawn pawn)
         {
             var settings = ProgressionAmmunitionMod.settings;
             if (pawn.RaceProps.Animal)
             {
                 return settings.animalRefillChance;
             }
-            switch (TechLevelFor(pawn))
+            switch (GetTechLevelForPawn(pawn))
             {
                 case TechLevel.Neolithic:
                     return settings.neolithicRefillChance;
@@ -59,7 +66,7 @@ namespace ProgressionAmmunition
             }
         }
 
-        private static TechLevel TechLevelFor(Pawn pawn)
+        private static TechLevel GetTechLevelForPawn(Pawn pawn)
         {
             var factionLevel = pawn.Faction?.def?.techLevel ?? TechLevel.Undefined;
             if (factionLevel > TechLevel.Animal)
@@ -69,14 +76,14 @@ namespace ProgressionAmmunition
             return pawn.equipment?.Primary?.def?.techLevel ?? TechLevel.Undefined;
         }
 
-        private static ThingDef RefillFor(Pawn pawn)
+        private static ThingDef GetRefillItemDefForPawn(Pawn pawn)
         {
             if (pawn.RaceProps.Animal)
             {
                 return DefsOf.PA_ArrowRefill;
             }
             var weapon = pawn.equipment?.Primary;
-            if (weapon == null || weapon.def.IsRangedWeapon is false || AmmoExtension.IsAmmoDisabledFor(weapon.def))
+            if (weapon == null || !weapon.def.IsRangedWeapon || AmmoExtension.IsAmmoDisabledFor(weapon.def))
             {
                 return null;
             }

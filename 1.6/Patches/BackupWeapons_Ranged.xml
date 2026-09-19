@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Autopistol -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Gun_Autopistol"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </nomatch>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Gun_Autopistol"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Revolver -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Gun_Revolver"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </value>
+      </nomatch>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Gun_Revolver"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <canBeBackupWeapon>true</canBeBackupWeapon>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Volt Pistol -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Volt Weaponry</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DV_Gun_VoltPistol"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VFEM2 Flintlock -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval 2</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFEM2_Gun_Flintlock"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VFES Double Action Revolver -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Settlers</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VFES_Gun_DoubleActionRevolver"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Combat Handgun -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Automatic Pistol -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_AutomaticPistol"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Charge Pistol -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_ChargePistol"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Hand Cannon -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_HandCannon"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWE Taser -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Non-Lethal</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWE_Gun_Taser"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWEFT Heavy Revolver -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Frontier</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWEFT Volcanic Pistol -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Frontier</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEFT_Gun_VolcanicPistol"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- VWEL Laser Pistol -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Laser</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/canBeBackupWeapon</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+              <value>
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]/modExtensions</xpath>
+            <value>
+              <li Class="ProgressionAmmunition.AmmoExtension">
+                <canBeBackupWeapon>true</canBeBackupWeapon>
+              </li>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

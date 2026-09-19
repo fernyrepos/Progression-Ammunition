@@ -4,6 +4,7 @@
   <PA_EnableModDesc>When off, the ammunition system is switched off: weapons fire without using ammo, the ammo gizmo and Assign tab column are hidden, NPCs stop spawning with refills, traders stop stocking them, and the recharger buildings and refill recipes disappear. Existing refill items and built rechargers are left in place.</PA_EnableModDesc>
   <PA_OnlyColonistsUseAmmo>Only colonists use ammo</PA_OnlyColonistsUseAmmo>
   <PA_OnlyColonistsUseAmmoDesc>If enabled, non-colonists will not need ammunition to shoot.</PA_OnlyColonistsUseAmmoDesc>
+  <PA_CanAIPawnsBringBackupWeapons>Ranged AI pawns can bring backup weapons</PA_CanAIPawnsBringBackupWeapons>
   <PA_ShowOnlyDrafted>Show ammunition gizmo only while drafted</PA_ShowOnlyDrafted>
   <PA_RefillBuildingsAreInfinite>Refill buildings have infinite refills</PA_RefillBuildingsAreInfinite>
   <PA_RefillBuildingsAreInfiniteDesc>If disabled, refill buildings have limited amount of refills, and need to be restocked using craftable refill packs of the corresponding ammo type.</PA_RefillBuildingsAreInfiniteDesc>
