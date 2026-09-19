@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Reel's Turret Pipeline</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- remove bulk process -->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="VFEFactory_AutomatedAmmunitionPress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes/li[text()="Reel_MakeTurretAmmoBulk"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/PipeSystem.ProcessDef[defName="Reel_MakeTurretAmmoBulk"]</xpath>
+        </li>
+
+        <!-- label override -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/PipeSystem.ProcessDef[defName="Reel_MakeTurretAmmo"]</xpath>
+          <value>
+            <labelOverride>Make Turret ammunition</labelOverride>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
