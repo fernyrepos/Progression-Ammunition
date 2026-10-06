@@ -45,7 +45,11 @@ namespace ProgressionAmmunition
                                 return;
 
                             OutOfAmmoUtility.TryStowOrDropWeapon(pawn);
-                            OutOfAmmoUtility.TryEquipOtherWeapon(pawn);
+                            if (!OutOfAmmoUtility.TryEquipOtherWeapon(pawn))
+                            {
+                                if (ProgressionAmmunitionMod.settings.canAIPawnsScavengeForWeapons)
+                                    OutOfAmmoUtility.TryScavengeWeapon(pawn);
+                            }
                         }
                     }
                 }

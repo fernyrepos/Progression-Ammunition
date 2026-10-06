@@ -6,12 +6,20 @@
     <max>3</max>
   </OrderedTakeGroupDef>
 
+  <ThingCategoryDef>
+    <defName>PA_Ammunition</defName>
+    <label>ammunition</label>
+    <parent>Manufactured</parent>
+    <iconPath>UI/Icons/ThingCategories/Ammo</iconPath>
+  </ThingCategoryDef>
+
   <ThingDef Abstract="True" Name="PA_AmmoRefillBase" ParentName="ResourceBase">
     <thingCategories>
-      <li>Manufactured</li>
+      <li>PA_Ammunition</li>
     </thingCategories>
     <stackLimit>25</stackLimit>
     <orderedTakeGroup>PA_Refill</orderedTakeGroup>
+    <tradeability>Buyable</tradeability>
     <drawGUIOverlay>true</drawGUIOverlay>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>

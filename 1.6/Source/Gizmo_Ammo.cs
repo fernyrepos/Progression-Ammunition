@@ -14,6 +14,7 @@ namespace ProgressionAmmunition
         private static bool draggingBar;
 
         private const float GizmoWidth = 212f;
+        private static readonly Texture2D BorderRedTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.85f, 0.18f, 0.18f));
         private static readonly Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
         private static readonly Texture2D BarHighlightTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
         private static readonly Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
@@ -36,6 +37,14 @@ namespace ProgressionAmmunition
             var rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
             var innerRect = rect.ContractedBy(6f);
             Widgets.DrawWindowBackground(rect);
+
+            if (compAmmo.IsOutOfAmmo)
+            {
+                GUI.DrawTexture(new Rect(rect.x, rect.y, rect.width, 1f), BorderRedTex);
+                GUI.DrawTexture(new Rect(rect.x, rect.yMax - 1f, rect.width, 1f), BorderRedTex);
+                GUI.DrawTexture(new Rect(rect.x, rect.y, 1f, rect.height), BorderRedTex);
+                GUI.DrawTexture(new Rect(rect.xMax - 1f, rect.y, 1f, rect.height), BorderRedTex);
+            }
 
             var iconRect = new Rect(innerRect.x, innerRect.y, innerRect.height, innerRect.height);
             Widgets.DrawMenuSection(iconRect);
@@ -63,7 +72,11 @@ namespace ProgressionAmmunition
             compAmmo.autoReloadThreshold = threshold;
 
             Text.Anchor = TextAnchor.MiddleCenter;
+            var prevGuiColor = GUI.color;
+            if (compAmmo.IsOutOfAmmo)
+                GUI.color = new Color(0.85f, 0.18f, 0.18f);
             Widgets.Label(barRect, "PA_AmmoFraction".Translate(compAmmo.CurAmmo, compAmmo.MaxAmmo));
+            GUI.color = prevGuiColor;
             Text.Anchor = TextAnchor.UpperLeft;
 
             TooltipHandler.TipRegion(barRect, "PA_AmmoGizmoTooltip".Translate(compAmmo.CurAmmo, compAmmo.MaxAmmo, (compAmmo.autoReloadThreshold * 100f).ToString("F0")));

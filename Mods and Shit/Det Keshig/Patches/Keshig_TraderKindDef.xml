@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="DV_Caravan_Keshig_CombatSupplier"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>1~5</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+        <countRange>1~5</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="DV_Base_Keshig_Standard"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+        <countRange>2~10</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+        <countRange>2~10</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_ArrowRefill</thingDef>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>PA_AmmoRefill</thingDef>
+      </li>
+    </value>
+  </Operation>
+</Patch>

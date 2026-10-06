@@ -8,7 +8,7 @@ namespace ProgressionAmmunition
     {
         public static bool Prefix(CompRefuelable __instance, ref bool __result)
         {
-            if (ProgressionAmmunitionMod.settings.refillBuildingsAreInfinite && __instance.parent is Building_AmmoRecharger)
+            if (__instance.parent is Building_AmmoRecharger ammoCharger && ammoCharger.HasInfiniteRefills())
             {
                 __result = true;
                 return false;

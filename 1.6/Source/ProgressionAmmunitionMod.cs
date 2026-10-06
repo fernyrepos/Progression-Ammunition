@@ -34,10 +34,18 @@ namespace ProgressionAmmunition
             listing.Begin(new Rect(0f, 0f, viewRect.width, 99999f));
             listing.CheckboxLabeled("PA_EnableMod".Translate(), ref settings.enableMod, "PA_EnableModDesc".Translate());
             listing.CheckboxLabeled("PA_OnlyColonistsUseAmmo".Translate(), ref settings.onlyColonistsUseAmmo, "PA_OnlyColonistsUseAmmoDesc".Translate());
+            if (!settings.onlyColonistsUseAmmo)
+            {
+                listing.CheckboxLabeled("PA_CanAIPawnsBringBackupWeapons".Translate(), ref settings.canAIPawnsBringBackupWeapons);
+            }
             listing.GapLine();
             listing.CheckboxLabeled("PA_ShowOnlyDrafted".Translate(), ref settings.showOnlyDrafted);
             listing.Gap();
             listing.CheckboxLabeled("PA_RefillBuildingsAreInfinite".Translate(), ref settings.refillBuildingsAreInfinite, "PA_RefillBuildingsAreInfiniteDesc".Translate());
+            if (!settings.refillBuildingsAreInfinite)
+            {
+                listing.CheckboxLabeled("PA_WeaponChargersAreInfinite".Translate(), ref settings.weaponChargersAreInfinite);
+            }
             listing.CheckboxLabeled("PA_AutoRefillWithConsumable".Translate(), ref settings.autoRefillWithConsumable);
             listing.Gap();
             listing.CheckboxLabeled("PA_AddRefillBuildingsToScenarios".Translate(), ref settings.addRefillBuildingsToScenarios, "PA_AddRefillBuildingsToScenariosDesc".Translate());

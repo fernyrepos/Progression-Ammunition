@@ -6,8 +6,11 @@ namespace ProgressionAmmunition
     {
         public bool enableMod = true;
         public bool onlyColonistsUseAmmo = true;
+        public bool canAIPawnsBringBackupWeapons = true;
+        public bool canAIPawnsScavengeForWeapons = true;
         public bool showOnlyDrafted = true;
         public bool refillBuildingsAreInfinite = true;
+        public bool weaponChargersAreInfinite = true;
         public bool autoRefillWithConsumable = false;
         public bool addRefillBuildingsToScenarios = true;
         public int baselineMaxAmmo = 30;
@@ -25,8 +28,11 @@ namespace ProgressionAmmunition
             base.ExposeData();
             Scribe_Values.Look(ref enableMod, "enableMod", true);
             Scribe_Values.Look(ref onlyColonistsUseAmmo, "onlyColonistsUseAmmo", true);
+            Scribe_Values.Look(ref canAIPawnsBringBackupWeapons, "canAIPawnsBringBackupWeapons", true);
+            Scribe_Values.Look(ref canAIPawnsScavengeForWeapons, "canAIPawnsScavengeForWeapons", true);
             Scribe_Values.Look(ref showOnlyDrafted, "showOnlyDrafted", true);
             Scribe_Values.Look(ref refillBuildingsAreInfinite, "refillBuildingsAreInfinite", true);
+            Scribe_Values.Look(ref weaponChargersAreInfinite, "weaponChargersAreInfinite", true);
             Scribe_Values.Look(ref autoRefillWithConsumable, "autoRefillWithConsumable", false);
             Scribe_Values.Look(ref addRefillBuildingsToScenarios, "addRefillBuildingsToScenarios", true);
             Scribe_Values.Look(ref baselineMaxAmmo, "baselineMaxAmmo", 30);
