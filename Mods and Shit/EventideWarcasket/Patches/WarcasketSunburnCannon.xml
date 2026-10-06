@@ -35,4 +35,40 @@
       </nomatch>
     </match>
   </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <ammoType>Charge</ammoType>
+        </li>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+        <value>
+          <ammoType>Charge</ammoType>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="dvd_CollapseWeapon"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <ammoType>Charge</ammoType>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
 </Patch>
