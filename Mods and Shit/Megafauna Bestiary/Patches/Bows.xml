@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <!-- Verdant Bow -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <ammoType>Arrow</ammoType>
+        </li>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+        <value>
+          <ammoType>Arrow</ammoType>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="MA_VerdantBow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <ammoType>Arrow</ammoType>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  
+  <!-- Capryak Scatterbow -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]</xpath>
+      <value>
+        <modExtensions />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions</xpath>
+      <value>
+        <li Class="ProgressionAmmunition.AmmoExtension">
+          <ammoType>Arrow</ammoType>
+        </li>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]/ammoType</xpath>
+        <value>
+          <ammoType>Arrow</ammoType>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="MA_CapryakScatterbow"]/modExtensions/li[@Class="ProgressionAmmunition.AmmoExtension"]</xpath>
+        <value>
+          <ammoType>Arrow</ammoType>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

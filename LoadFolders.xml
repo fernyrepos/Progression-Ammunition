@@ -11,5 +11,6 @@
     <li IfModActive="vanillaexpanded.skills">Mods and Shit/VSE</li>
     <li IfModActive="VanillaExpanded.VWE">Mods and Shit/VWE</li>
     <li IfModActive="VanillaExpanded.VWEHW">Mods and Shit/VWEHW</li>
+    <li IfModActive="veterano.mythicages.megafaunabestiary">Mods and Shit/Megafauna Bestiary</li>
   </v1.6>
 </loadFolders>
